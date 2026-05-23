@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鄭雅心 Tammy Cheng｜品牌行銷經理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+TC:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f3ef;
+    --accent: #ff4d1c;
+    --accent2: #ffd600;
+    --gray: #1c1c1c;
+    --mid: #3a3a3a;
+    --light: #888;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–black);
+color: var(–white);
+font-family: ‘Noto Sans TC’, sans-serif;
+overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+display: flex; justify-content: space-between; align-items: center;
+padding: 20px 48px;
+mix-blend-mode: normal;
+background: rgba(10,10,10,0.85);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-logo {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 22px;
+letter-spacing: 3px;
+color: var(–white);
+text-decoration: none;
+}
+.nav-logo span { color: var(–accent); }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+color: var(–light);
+text-decoration: none;
+font-size: 13px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+transition: color 0.2s;
+font-weight: 500;
+}
+.nav-links a:hover { color: var(–white); }
+
+/* ── HERO ── */
+#hero {
+min-height: 100vh;
+display: grid;
+grid-template-columns: 1fr 1fr;
+position: relative;
+overflow: hidden;
+}
+.hero-left {
+display: flex; flex-direction: column; justify-content: center;
+padding: 120px 48px 80px;
+position: relative; z-index: 2;
+}
+.hero-tag {
+display: inline-flex; align-items: center; gap: 10px;
+font-family: ‘DM Mono’, monospace;
+font-size: 11px; letter-spacing: 3px;
+color: var(–accent);
+text-transform: uppercase;
+margin-bottom: 28px;
+}
+.hero-tag::before {
+content: ‘’;
+display: block; width: 32px; height: 2px;
+background: var(–accent);
+}
+.hero-name-en {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: clamp(72px, 9vw, 130px);
+line-height: 0.9;
+letter-spacing: 2px;
+color: var(–white);
+margin-bottom: 4px;
+}
+.hero-name-zh {
+font-size: clamp(28px, 3.5vw, 48px);
+font-weight: 900;
+color: var(–white);
+letter-spacing: 12px;
+margin-bottom: 32px;
+}
+.hero-tagline {
+font-size: 15px;
+line-height: 1.8;
+color: var(–light);
+max-width: 380px;
+margin-bottom: 48px;
+font-weight: 300;
+letter-spacing: 0.5px;
+}
+.hero-tagline strong { color: var(–white); font-weight: 700; }
+.hero-cta {
+display: flex; gap: 16px; flex-wrap: wrap;
+}
+.btn-primary {
+background: var(–accent);
+color: var(–white);
+padding: 14px 32px;
+font-size: 13px; font-weight: 700;
+letter-spacing: 2px; text-transform: uppercase;
+text-decoration: none;
+display: inline-block;
+transition: transform 0.2s, background 0.2s;
+clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 12px 100%);
+}
+.btn-primary:hover { transform: translateY(-2px); background: #ff3000; }
+.btn-outline {
+border: 1px solid rgba(255,255,255,0.25);
+color: var(–white);
+padding: 14px 32px;
+font-size: 13px; font-weight: 500;
+letter-spacing: 2px; text-transform: uppercase;
+text-decoration: none;
+display: inline-block;
+transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: var(–white); }
+
+.hero-right {
+position: relative; overflow: hidden;
+background: var(–gray);
+display: flex; align-items: flex-end; justify-content: flex-end;
+}
+.hero-bg-text {
+position: absolute;
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 28vw;
+color: rgba(255,255,255,0.03);
+line-height: 1;
+top: 50%; right: -40px;
+transform: translateY(-50%);
+pointer-events: none;
+white-space: nowrap;
+}
+.hero-stats {
+position: absolute;
+bottom: 0; left: 0; right: 0;
+display: grid; grid-template-columns: 1fr 1fr 1fr;
+border-top: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item {
+padding: 28px 24px;
+border-right: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 40px; color: var(–accent);
+line-height: 1;
+}
+.stat-label {
+font-size: 11px; color: var(–light);
+letter-spacing: 1px; margin-top: 4px;
+font-weight: 300;
+}
+.hero-graphic {
+position: absolute;
+top: 50%; left: 50%;
+transform: translate(-50%, -50%);
+width: 340px; height: 340px;
+border: 1px solid rgba(255,77,28,0.15);
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+}
+.hero-graphic::before {
+content: ‘’;
+position: absolute;
+width: 260px; height: 260px;
+border: 1px solid rgba(255,77,28,0.1);
+border-radius: 50%;
+}
+.hero-graphic::after {
+content: ‘’;
+position: absolute;
+width: 180px; height: 180px;
+background: rgba(255,77,28,0.06);
+border-radius: 50%;
+}
+.hero-icon {
+font-size: 72px; z-index: 1;
+animation: pulse 4s ease-in-out infinite;
+}
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.08); }
+}
+
+/* scrolling ticker */
+.ticker-wrap {
+background: var(–accent);
+overflow: hidden;
+padding: 12px 0;
+}
+.ticker {
+display: flex; gap: 0;
+animation: ticker 20s linear infinite;
+white-space: nowrap;
+}
+.ticker-item {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 18px; letter-spacing: 3px;
+color: var(–white);
+padding: 0 32px;
+display: flex; align-items: center; gap: 32px;
+}
+.ticker-item::after { content: ‘◆’; opacity: 0.5; }
+@keyframes ticker {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+
+/* ── SECTION COMMON ── */
+section { padding: 100px 48px; }
+.section-label {
+font-family: ‘DM Mono’, monospace;
+font-size: 11px; letter-spacing: 4px;
+color: var(–accent); text-transform: uppercase;
+margin-bottom: 16px;
+display: flex; align-items: center; gap: 12px;
+}
+.section-label::before {
+content: ‘’;
+display: block; width: 24px; height: 2px;
+background: var(–accent);
+}
+.section-title {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: clamp(42px, 6vw, 80px);
+line-height: 1;
+letter-spacing: 2px;
+margin-bottom: 60px;
+}
+
+/* ── ABOUT ── */
+#about { background: var(–gray); }
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: start;
+}
+.about-text {
+font-size: 16px; line-height: 2;
+color: rgba(245,243,239,0.75);
+font-weight: 300;
+}
+.about-text p { margin-bottom: 20px; }
+.about-text strong { color: var(–white); font-weight: 700; }
+.about-right {}
+.about-highlight {
+background: var(–black);
+border-left: 3px solid var(–accent);
+padding: 28px 32px;
+margin-bottom: 20px;
+}
+.about-highlight-label {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px; letter-spacing: 2px;
+color: var(–accent); text-transform: uppercase;
+margin-bottom: 8px;
+}
+.about-highlight-text {
+font-size: 15px; color: var(–white);
+line-height: 1.7; font-weight: 500;
+}
+
+/* ── SKILLS ── */
+#skills { background: var(–black); }
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2px;
+}
+.skill-card {
+background: var(–gray);
+padding: 40px 36px;
+position: relative;
+overflow: hidden;
+transition: background 0.3s;
+cursor: default;
+}
+.skill-card:hover { background: #222; }
+.skill-card::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 3px;
+background: var(–accent);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.3s;
+}
+.skill-card:hover::before { transform: scaleX(1); }
+.skill-icon { font-size: 36px; margin-bottom: 20px; }
+.skill-name {
+font-size: 17px; font-weight: 700;
+margin-bottom: 12px; color: var(–white);
+}
+.skill-tags {
+display: flex; flex-wrap: wrap; gap: 8px;
+margin-bottom: 20px;
+}
+.tag {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px; letter-spacing: 1px;
+color: var(–light);
+border: 1px solid rgba(255,255,255,0.1);
+padding: 4px 10px;
+}
+.tag.hot {
+background: rgba(255,77,28,0.15);
+border-color: rgba(255,77,28,0.3);
+color: var(–accent);
+}
+.skill-desc { font-size: 13px; color: var(–light); line-height: 1.8; }
+
+/* ── PROJECTS ── */
+#projects { background: var(–gray); }
+.projects-list { display: flex; flex-direction: column; gap: 2px; }
+.project-item {
+background: var(–black);
+padding: 40px 48px;
+display: grid;
+grid-template-columns: 64px 1fr auto;
+gap: 32px;
+align-items: center;
+transition: background 0.25s;
+position: relative;
+overflow: hidden;
+}
+.project-item::after {
+content: ‘’;
+position: absolute;
+left: 0; top: 0; bottom: 0;
+width: 3px;
+background: var(–accent);
+transform: scaleY(0);
+transition: transform 0.3s;
+}
+.project-item:hover { background: #141414; }
+.project-item:hover::after { transform: scaleY(1); }
+.project-num {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 48px; color: rgba(255,255,255,0.08);
+line-height: 1;
+}
+.project-content {}
+.project-cat {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px; letter-spacing: 2px;
+color: var(–accent); text-transform: uppercase;
+margin-bottom: 6px;
+}
+.project-title {
+font-size: 20px; font-weight: 700;
+color: var(–white); margin-bottom: 10px;
+}
+.project-desc {
+font-size: 14px; color: var(–light);
+line-height: 1.7; max-width: 600px;
+}
+.project-result {
+text-align: right; min-width: 160px;
+}
+.result-num {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 36px; color: var(–accent2);
+line-height: 1;
+}
+.result-label {
+font-size: 11px; color: var(–light);
+letter-spacing: 1px;
+}
+
+/* ── EXPERIENCE TIMELINE ── */
+#experience { background: var(–black); }
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+content: ‘’;
+position: absolute;
+left: 0; top: 0; bottom: 0;
+width: 1px;
+background: rgba(255,255,255,0.1);
+}
+.timeline-item {
+position: relative;
+padding-bottom: 60px;
+padding-left: 40px;
+}
+.timeline-item::before {
+content: ‘’;
+position: absolute;
+left: -4px; top: 6px;
+width: 9px; height: 9px;
+background: var(–accent);
+border-radius: 50%;
+}
+.timeline-year {
+font-family: ‘DM Mono’, monospace;
+font-size: 11px; letter-spacing: 2px;
+color: var(–accent); margin-bottom: 8px;
+}
+.timeline-role {
+font-size: 20px; font-weight: 700;
+color: var(–white); margin-bottom: 4px;
+}
+.timeline-company {
+font-size: 14px; color: var(–light);
+margin-bottom: 20px; letter-spacing: 0.5px;
+}
+.timeline-highlights { list-style: none; }
+.timeline-highlights li {
+font-size: 14px; color: rgba(245,243,239,0.65);
+line-height: 1.8;
+padding: 8px 0;
+border-bottom: 1px solid rgba(255,255,255,0.05);
+display: flex; align-items: flex-start; gap: 12px;
+}
+.timeline-highlights li::before {
+content: ‘›’;
+color: var(–accent);
+font-size: 18px;
+line-height: 1.5;
+flex-shrink: 0;
+}
+
+/* ── TOOLS ── */
+#tools { background: var(–gray); }
+.tools-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 2px;
+}
+.tool-item {
+background: var(–black);
+padding: 24px 28px;
+display: flex; align-items: center; gap: 16px;
+transition: background 0.2s;
+}
+.tool-item:hover { background: #141414; }
+.tool-emoji { font-size: 24px; }
+.tool-info {}
+.tool-name { font-size: 14px; font-weight: 700; color: var(–white); }
+.tool-cat { font-size: 11px; color: var(–light); letter-spacing: 0.5px; }
+
+/* ── CONTACT ── */
+#contact { background: var(–accent); }
+#contact .section-label { color: rgba(0,0,0,0.5); }
+#contact .section-label::before { background: rgba(0,0,0,0.3); }
+#contact .section-title { color: var(–black); }
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: center;
+}
+.contact-left {}
+.contact-sub {
+font-size: 16px;
+color: rgba(0,0,0,0.65);
+line-height: 1.8;
+margin-bottom: 40px;
+}
+.contact-links { display: flex; flex-direction: column; gap: 16px; }
+.contact-link {
+display: flex; align-items: center; gap: 16px;
+text-decoration: none;
+padding: 20px 24px;
+background: rgba(0,0,0,0.08);
+transition: background 0.2s;
+}
+.contact-link:hover { background: rgba(0,0,0,0.15); }
+.contact-link-icon { font-size: 20px; }
+.contact-link-text { font-size: 14px; color: var(–black); font-weight: 600; }
+.contact-link-sub { font-size: 12px; color: rgba(0,0,0,0.5); }
+.contact-right {
+display: flex; flex-direction: column; gap: 24px;
+}
+.contact-value-card {
+background: rgba(0,0,0,0.1);
+padding: 28px 32px;
+}
+.contact-value-label {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px; letter-spacing: 2px;
+color: rgba(0,0,0,0.4); text-transform: uppercase;
+margin-bottom: 8px;
+}
+.contact-value-text {
+font-size: 15px; color: var(–black);
+font-weight: 700; line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+footer {
+background: var(–black);
+padding: 32px 48px;
+display: flex; justify-content: space-between; align-items: center;
+border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-logo {
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 18px; letter-spacing: 3px;
+color: var(–light);
+}
+.footer-copy {
+font-size: 12px; color: rgba(255,255,255,0.2);
+font-family: ‘DM Mono’, monospace;
+letter-spacing: 1px;
+}
+
+/* animations */
+.fade-in {
+opacity: 0; transform: translateY(24px);
+transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+opacity: 1; transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+nav { padding: 16px 24px; }
+.nav-links { display: none; }
+#hero { grid-template-columns: 1fr; }
+.hero-right { display: none; }
+section { padding: 72px 24px; }
+.about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+.skills-grid { grid-template-columns: 1fr; }
+.tools-grid { grid-template-columns: 1fr 1fr; }
+.project-item { grid-template-columns: 1fr; gap: 16px; }
+.project-num { display: none; }
+footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <a class="nav-logo" href="#hero">TAMMY<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">關於我</a></li>
+    <li><a href="#skills">專業能力</a></li>
+    <li><a href="#projects">代表專案</a></li>
+    <li><a href="#experience">工作歷程</a></li>
+    <li><a href="#contact">聯絡我</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Brand Marketing Manager</div>
+    <div class="hero-name-en">TAMMY<br>CHENG</div>
+    <div class="hero-name-zh">鄭雅心</div>
+    <p class="hero-tagline">
+      從策略到執行的<strong>全鏈路行銷人</strong>。<br>
+      擅長電商成長、品牌建立與數據驅動決策，<br>
+      在運動產業深耕 <strong>3–5 年</strong>，橫跨多個品類。
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">看我的專案</a>
+      <a href="#contact" class="btn-outline">與我合作</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-bg-text">T</div>
+    <div class="hero-graphic">
+      <div class="hero-icon">🏆</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">品牌官網<br>從零建立</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">產品線<br>完整操盤</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">360°</div>
+        <div class="stat-label">策略到執行<br>全鏈路</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item">品牌行銷</div>
+    <div class="ticker-item">電商成長</div>
+    <div class="ticker-item">Meta 廣告優化</div>
+    <div class="ticker-item">SEO 內容策略</div>
+    <div class="ticker-item">會員制度設計</div>
+    <div class="ticker-item">數據分析</div>
+    <div class="ticker-item">KOL 合作</div>
+    <div class="ticker-item">官網架構規劃</div>
+    <div class="ticker-item">競品市調</div>
+    <div class="ticker-item">品牌行銷</div>
+    <div class="ticker-item">電商成長</div>
+    <div class="ticker-item">Meta 廣告優化</div>
+    <div class="ticker-item">SEO 內容策略</div>
+    <div class="ticker-item">會員制度設計</div>
+    <div class="ticker-item">數據分析</div>
+    <div class="ticker-item">KOL 合作</div>
+    <div class="ticker-item">官網架構規劃</div>
+    <div class="ticker-item">競品市調</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="section-label">About Me</div>
+  <div class="section-title">關於我</div>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p>我是 <strong>鄭雅心 Tammy</strong>，一位在運動產業深耕的品牌行銷經理。我的核心能力在於能夠<strong>同時看見全局策略與細節執行</strong>——從市場分析、品牌定位，到廣告投放、內容產製，一手包辦。</p>
+      <p>在戶外運動電商領域，我負責過<strong>滑雪、露營、夏日戲水、直排輪、滑板、健身器材</strong>等多個品類的完整行銷操盤，並主導建立獨立健身裝備品牌 <strong>WILD BULL</strong> 的官網架構、所有產品文案與 SEO 內容——從零開始。</p>
+      <p>我習慣用數據說話：透過會員購買行為的跨品類分析，找到交叉行銷機會；每週根據營運數據優化 Meta 廣告，追蹤線上平台的門市溢出效益（ROAS），讓每一分預算都用在刀口上。</p>
+    </div>
+    <div class="about-right fade-in">
+      <div class="about-highlight">
+        <div class="about-highlight-label">核心信念</div>
+        <div class="about-highlight-text">好的行銷不是靠感覺，是靠系統——從數據找機會，從策略建架構，從執行看成果。</div>
+      </div>
+      <div class="about-highlight">
+        <div class="about-highlight-label">產業背景</div>
+        <div class="about-highlight-text">運動戶外電商，橫跨實體門市 × 電商平台（蝦皮、官網）多通路整合操盤。</div>
+      </div>
+      <div class="about-highlight">
+        <div class="about-highlight-label">我能帶來的</div>
+        <div class="about-highlight-text">品牌建立 × 電商成長 × 廣告成效優化 × 內容策略，全鏈路一條龍。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+  <div class="section-label">Expertise</div>
+  <div class="section-title">專業能力</div>
+  <div class="skills-grid">
+
+```
+<div class="skill-card fade-in">
+  <div class="skill-icon">🎯</div>
+  <div class="skill-name">品牌策略 × 市場定位</div>
+  <div class="skill-tags">
+    <span class="tag hot">品牌建立</span>
+    <span class="tag">競品分析</span>
+    <span class="tag">市場調查</span>
+    <span class="tag">TA 研究</span>
+  </div>
+  <div class="skill-desc">從競品市調出發，建立差異化品牌定位。主導 WILD BULL 健身裝備品牌從無到有，規劃完整官網架構與品牌故事。</div>
+</div>
+
+<div class="skill-card fade-in">
+  <div class="skill-icon">📊</div>
+  <div class="skill-name">數據分析 × 會員洞察</div>
+  <div class="skill-tags">
+    <span class="tag hot">數據驅動</span>
+    <span class="tag">交叉分析</span>
+    <span class="tag">會員分級</span>
+    <span class="tag">ROAS 追蹤</span>
+  </div>
+  <div class="skill-desc">對數萬筆會員購買紀錄進行跨品類交叉分析，挖掘滑雪 × 露營 × 夏日戲水的交叉行銷機會，找出真實的成長槓桿。</div>
+</div>
+
+<div class="skill-card fade-in">
+  <div class="skill-icon">📱</div>
+  <div class="skill-name">Meta 廣告 × 成效優化</div>
+  <div class="skill-tags">
+    <span class="tag hot">Meta Ads</span>
+    <span class="tag">預算分配</span>
+    <span class="tag">門市溢出率</span>
+    <span class="tag">每週優化</span>
+  </div>
+  <div class="skill-desc">每週根據營運數據動態調整 Meta 廣告預算，追蹤線上廣告對實體門市的溢出來客數與營業額影響，精準計算 ROAS。</div>
+</div>
+
+<div class="skill-card fade-in">
+  <div class="skill-icon">🌐</div>
+  <div class="skill-name">SEO × 內容行銷</div>
+  <div class="skill-tags">
+    <span class="tag hot">SEO 策略</span>
+    <span class="tag">網頁文案</span>
+    <span class="tag">部落客合作</span>
+    <span class="tag">KOL</span>
+  </div>
+  <div class="skill-desc">撰寫完整 SEO 優化網頁內容，洽談健身知識部落客合作提升品牌可信度與自然流量。負責所有商品文案與網頁 meta 標籤撰寫。</div>
+</div>
+
+<div class="skill-card fade-in">
+  <div class="skill-icon">🏪</div>
+  <div class="skill-name">電商 × 多通路整合</div>
+  <div class="skill-tags">
+    <span class="tag hot">全通路</span>
+    <span class="tag">蝦皮</span>
+    <span class="tag">官網</span>
+    <span class="tag">實體門市</span>
+  </div>
+  <div class="skill-desc">整合線上電商平台（蝦皮、品牌官網）與 40+ 實體門市據點，規劃輔銷物、追蹤各通路銷售表現，打通線上線下數據。</div>
+</div>
+
+<div class="skill-card fade-in">
+  <div class="skill-icon">🎬</div>
+  <div class="skill-name">影音企劃 × 跨部門協作</div>
+  <div class="skill-tags">
+    <span class="tag hot">影音策略</span>
+    <span class="tag">腳本企劃</span>
+    <span class="tag">跨部門</span>
+    <span class="tag">專案管理</span>
+  </div>
+  <div class="skill-desc">規劃影音內容清單交由影音部執行，統籌行銷物料製作進度。擅長跨部門溝通，確保品牌訊息一致性從策劃到上線。</div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+  <div class="section-label">Selected Works</div>
+  <div class="section-title">代表專案</div>
+  <div class="projects-list">
+
+```
+<div class="project-item fade-in">
+  <div class="project-num">01</div>
+  <div class="project-content">
+    <div class="project-cat">品牌建立 × 電商</div>
+    <div class="project-title">WILD BULL 健身裝備品牌官網｜從零到上線</div>
+    <div class="project-desc">獨立主導健身裝備子品牌的官網從無到有：規劃完整網站架構（首頁、關於我們、商品分類、教練推薦、愛用者分享、會員制度），撰寫全站 SEO 文案與所有商品描述，建立會員分級制度（隊友/隊長/團長），並串接客服與保固系統。</div>
+  </div>
+  <div class="project-result">
+    <div class="result-num">100%</div>
+    <div class="result-label">從零建立<br>完整品牌官網</div>
+  </div>
+</div>
+
+<div class="project-item fade-in">
+  <div class="project-num">02</div>
+  <div class="project-content">
+    <div class="project-cat">數據分析 × 成長策略</div>
+    <div class="project-title">會員跨品類交叉購買分析｜發掘行銷新機會</div>
+    <div class="project-desc">分析數萬筆 2023–2025 年會員購買紀錄，量化滑雪、露營、夏日戲水、直排輪、健身等品類的交叉購買率。發現露營 × 夏季戲水有 1,858 位重疊會員，滑雪 × 露營有 1,018 位——為跨品類行銷活動提供數據支撐。</div>
+  </div>
+  <div class="project-result">
+    <div class="result-num">13K+</div>
+    <div class="result-label">多品類<br>可交叉行銷客群</div>
+  </div>
+</div>
+
+<div class="project-item fade-in">
+  <div class="project-num">03</div>
+  <div class="project-content">
+    <div class="project-cat">廣告投放 × 多通路追蹤</div>
+    <div class="project-title">Meta 廣告 × 門市溢出率系統</div>
+    <div class="project-desc">建立廣告成效追蹤框架，每週根據各品類（滑雪、夏季、露營、直排輪）的來客數、營業額、客單價與同期對比，動態調整 Meta 廣告預算。量化線上廣告對實體 40+ 門市的溢出效益，打通線上線下數據。</div>
+  </div>
+  <div class="project-result">
+    <div class="result-num">40+</div>
+    <div class="result-label">實體門市<br>線上線下整合</div>
+  </div>
+</div>
+
+<div class="project-item fade-in">
+  <div class="project-num">04</div>
+  <div class="project-content">
+    <div class="project-cat">SEO × 內容行銷</div>
+    <div class="project-title">競品市調 × 差異化商品文案策略</div>
+    <div class="project-desc">針對滑雪手套進行系統性競品分析，對比保暖度、防雪性、靈活度、設計細節與價格帶，提煉差異化 USP 作為廣告素材與比較圖文字基礎。同時撰寫全線產品 SEO 優化文案，從標題到 meta description 完整操盤。</div>
+  </div>
+  <div class="project-result">
+    <div class="result-num">全線</div>
+    <div class="result-label">商品 SEO 文案<br>完整操盤</div>
+  </div>
+</div>
+
+<div class="project-item fade-in">
+  <div class="project-num">05</div>
+  <div class="project-content">
+    <div class="project-cat">KOL 策略 × 品牌信任度</div>
+    <div class="project-title">健身知識部落客合作｜提升品牌專業信賴度</div>
+    <div class="project-desc">主動洽談健身知識型部落客，以「部落客產出專業內容、刊載於品牌官網」的合作模式，同步提升品牌專業度、讀者信任感與 SEO 自然流量分數。</div>
+  </div>
+  <div class="project-result">
+    <div class="result-num">↑</div>
+    <div class="result-label">品牌信賴度<br>SEO 分數提升</div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <div class="section-title">工作歷程</div>
+  <div class="timeline">
+
+```
+<div class="timeline-item fade-in">
+  <div class="timeline-year">2022.5 — 現職 ｜ 運動戶外電商品牌</div>
+  <div class="timeline-role">品牌行銷經理</div>
+  <div class="timeline-company">大佑體育 dayousport.com.tw ｜ 台灣</div>
+  <ul class="timeline-highlights">
+    <li>主導健身裝備子品牌 WILD BULL（wildbulltw.com）從零架設官網，統籌架構、文案、SEO 與會員制度</li>
+    <li>每週分析 Meta 廣告數據，追蹤多品類（滑雪/露營/夏季/直排輪）廣告對 40+ 門市的溢出效益</li>
+    <li>進行大規模會員跨品類交叉購買分析，量化 2023–2025 年各品類重疊客群，支持交叉行銷策略</li>
+    <li>洽談健身知識型 KOL 合作，以內容行銷策略提升品牌專業信賴度與 SEO 分數</li>
+    <li>規劃年度輔銷物需求並追蹤費用，協調影音部製作影片，統籌跨部門行銷物料</li>
+    <li>建立新版會員分級制度（隊友/隊長/團長），分析各產品線交叉行銷機會</li>
+  </ul>
+</div>
+
+<div class="timeline-item fade-in">
+  <div class="timeline-year">2020.8 ｜ 第一份正職</div>
+  <div class="timeline-role">內容編輯企劃</div>
+  <div class="timeline-company">GAGU 北歐家具工廠 ｜ 台灣</div>
+  <ul class="timeline-highlights">
+    <li>負責品牌社群規劃，維持週更 2–3 篇頻率，文案累計 50 篇以上，觸及人次 10K–60K，廣告曝光觸及最高達 <strong style="color:var(--accent2)">239 萬</strong></li>
+    <li>每月企劃門市檔期、促銷品、出清品、MGM 方案與社群圖，視覺設計發案；年中特賣會 3 個月售完，創造 <strong style="color:var(--accent2)">50 萬營業額</strong></li>
+    <li>監測 FB 粉專及七家門市 Google 地圖評論，負責負評公關回覆，降低 5 件以上公開負評；管理老闆 LINE@ 官方帳號與客訴回覆</li>
+    <li>負責同年度四家新門市展店輔銷物專案執行；籌辦兒童節親子活動，5 天內報名額滿</li>
+    <li>投放 FB、Google Ads 廣告，進行競品市調與問卷分析</li>
+  </ul>
+</div>
+
+<div class="timeline-item fade-in">
+  <div class="timeline-year">學生時期兼職</div>
+  <div class="timeline-role">SEO 內容文章撰寫</div>
+  <div class="timeline-company">零一行銷 SEO 持續成長計劃</div>
+  <ul class="timeline-highlights">
+    <li>參與 SEO 持續成長計劃，負責內容文章撰寫，奠定內容行銷與關鍵字策略基礎</li>
+  </ul>
+</div>
+
+<div class="timeline-item fade-in">
+  <div class="timeline-year">學歷｜2020.6 畢業</div>
+  <div class="timeline-role">企業管理學系</div>
+  <div class="timeline-company">國立臺灣科技大學</div>
+  <ul class="timeline-highlights">
+    <li>學生會公關長、全校不分系學會、精誠之夜籌備委員</li>
+    <li>校刊採訪編輯｜《不一樣的人生》人物專訪</li>
+  </ul>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- TOOLS -->
+
+<section id="tools">
+  <div class="section-label">Tools & Platforms</div>
+  <div class="section-title">工具 & 平台</div>
+  <div class="tools-grid">
+    <div class="tool-item"><div class="tool-emoji">📘</div><div class="tool-info"><div class="tool-name">Meta Ads Manager</div><div class="tool-cat">廣告投放 & 成效優化</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🛒</div><div class="tool-info"><div class="tool-name">Shopify</div><div class="tool-cat">品牌官網電商</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🦐</div><div class="tool-info"><div class="tool-name">蝦皮賣場</div><div class="tool-cat">電商平台操盤</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">📊</div><div class="tool-info"><div class="tool-name">Google Sheets</div><div class="tool-cat">數據分析 & 追蹤</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🔍</div><div class="tool-info"><div class="tool-name">Google Analytics</div><div class="tool-cat">網站流量分析</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🎨</div><div class="tool-info"><div class="tool-name">Canva / Figma</div><div class="tool-cat">視覺設計 & 提案</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">📱</div><div class="tool-info"><div class="tool-name">Omnichat</div><div class="tool-cat">客服 & 顧客旅程串接</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🎬</div><div class="tool-info"><div class="tool-name">影音企劃腳本</div><div class="tool-cat">內容策略 & 製作協調</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🏅</div><div class="tool-info"><div class="tool-name">Google Ads 廣告認證</div><div class="tool-cat">搜尋 & 影片廣告認證</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">📝</div><div class="tool-info"><div class="tool-name">SEO 內容策略</div><div class="tool-cat">零一行銷 SEO 計劃成員</div></div></div>
+    <div class="tool-item"><div class="tool-emoji">🌐</div><div class="tool-info"><div class="tool-name">TOEIC 665 分</div><div class="tool-cat">英文閱讀與商業溝通</div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="section-label">Let's Work Together</div>
+  <div class="section-title">聯絡我</div>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <p class="contact-sub">如果你正在找一位能夠<strong>從策略到執行</strong>的品牌行銷夥伴——不管是全職機會還是專案合作，我很樂意聊聊。</p>
+      <div class="contact-links">
+        <a href="mailto:frog04040415@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉️</div>
+          <div>
+            <div class="contact-link-text">Email</div>
+            <div class="contact-link-sub">frog04040415@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
+          <div class="contact-link-icon">💼</div>
+          <div>
+            <div class="contact-link-text">LinkedIn</div>
+            <div class="contact-link-sub">linkedin.com/in/tammy（可補充）</div>
+          </div>
+        </a>
+        <a href="https://cindyfrog.blogspot.com/" class="contact-link" target="_blank">
+          <div class="contact-link-icon">✍️</div>
+          <div>
+            <div class="contact-link-text">個人 Blog</div>
+            <div class="contact-link-sub">美好生活・燦爛年代｜生活觀察 & 文字撰寫</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="contact-value-card">
+        <div class="contact-value-label">我擅長的合作類型</div>
+        <div class="contact-value-text">品牌行銷策略顧問<br>電商成長操盤<br>SEO 內容策略規劃<br>Meta 廣告管理優化</div>
+      </div>
+      <div class="contact-value-card">
+        <div class="contact-value-label">產業偏好</div>
+        <div class="contact-value-text">運動戶外 ｜ 生活風格<br>消費品電商 ｜ D2C 品牌</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-logo">TAMMY CHENG</div>
+  <div class="footer-copy">© 2026 鄭雅心. All rights reserved.</div>
+</footer>
+
+<script>
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
